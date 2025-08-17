@@ -1,27 +1,52 @@
-# Attendance
- This is an Attendance app for marking and viewing attendance developed with flutter and firebase. The Product has two parts 1) A [NodeJS script](script/app.js) which act as a dummy enrollment server, 2) A Flutter app for both Android and IOS. Implemented RBAC for the app with three roles such as student, staff and admin each having their own access permissions.
+# GEC Raipur Attendance App
 
-# Screenshots
+A Flutter + Firebase-based attendance management system developed for **GEC Raipur**.  
+It allows students, faculty, and administrators to manage and view attendance records with role-based access control (RBAC).
+
+---
+
+## 🎯 Features
+- **Role-based access control (RBAC)**
+  - **Admin**: Manage entire institute
+  - **HOD**: Manage their department
+  - **Faculty**: Manage assigned classes
+  - **Students**: View their own attendance with alerts if below the threshold
+- Clean and simple UI
+- Works on both **Android** and **iOS**
+
+---
+
+## 📱 Screenshots
 <div>
-<img src="images/loading.png" alt="phone image" width="200px" />
-<img src="images/login.png" alt="phone image" width="200px" />
-<img src="images/forgotpw.png" alt="phone image" width="200px" />
-<img src="images/home.png" alt="phone image" width="200px" />
-<img src="images/staff_view.png" alt="phone image" width="200px" />
-<img src="images/view.png" alt="phone image" width="200px" />
-<img src="images/mark.png" alt="phone image" width="200px" />
+<img src="images/loading.png" alt="Loading Screen" width="200px" />
+<img src="images/login.png" alt="Login Screen" width="200px" />
+<img src="images/home.png" alt="Home Screen" width="200px" />
+<img src="images/view.png" alt="Student View" width="200px" />
+<img src="images/mark.png" alt="Faculty Marking" width="200px" />
 </div>
 
-# Contributions
-Contributions are welcome. Please read the [contributions guide](CONTRIBUTING.md) for more information.
+---
 
 ## Getting Started
 
-A few resources to get you started if this is your first Flutter project:
+To run this project locally:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+1. Install [Flutter](https://flutter.dev/docs/get-started/install).
+2. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/attendance-app.git
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Install dependencies:
+flutter pub get
+
+4. Run the app:
+flutter run
+
+
+Maintained by: Stuti Shivhare
+
+
+
+
+
+
