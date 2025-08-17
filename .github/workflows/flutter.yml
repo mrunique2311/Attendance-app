@@ -16,13 +16,13 @@ jobs:
     # Setup Flutter (OLD version for compatibility)
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '2.10.5'   # 👈 Pin Flutter here
+        flutter-version: '2.10.5'   # 👈 Stick to Flutter 2.x for this old repo
 
     - name: Install dependencies
       run: flutter pub get
 
-    - name: Build APK
-      run: flutter build apk --release
+    - name: Build APK (ignore old embedding warning)
+      run: flutter build apk --release --ignore-deprecation
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
