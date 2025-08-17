@@ -13,15 +13,20 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    # Setup Flutter (OLD version for compatibility)
+    - name: Set up Java 8
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '8'
+
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '2.10.5'   # 👈 Stick to Flutter 2.x for this old repo
+        flutter-version: '2.10.5'
 
     - name: Install dependencies
       run: flutter pub get
 
-    - name: Build APK (ignore old embedding warning)
+    - name: Build APK
       run: flutter build apk --release --ignore-deprecation
 
     - name: Upload APK
